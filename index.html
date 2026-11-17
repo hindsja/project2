@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ETF Portfolio Committee Dashboard</title>
+<style>
+:root{--ink:#162a35;--muted:#556b76;--paper:#f3f6f5;--navy:#102e3a;--teal:#126e61;--line:#dce5e3;--gold:#e5bb62;--red:#a33138}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}button,input,select{font:inherit}a{color:var(--teal)}header{background:var(--navy);color:#fff;padding:32px 5vw 36px}header .eyebrow{color:#a2d5ca;letter-spacing:.14em;font-size:11px;font-weight:750}h1{font-size:clamp(28px,3.6vw,46px);line-height:1.15;margin:10px 0 12px;letter-spacing:-.035em}header p{max-width:840px;color:#c7d8df;margin:8px 0;font-size:14px}.header-meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:21px}.pill{padding:5px 11px;border:1px solid #45606b;border-radius:30px;font-size:12px}.layout{max-width:1480px;margin:28px auto;padding:0 4vw;display:grid;grid-template-columns:285px minmax(0,1fr);gap:26px}.controls{align-self:start;background:white;border:1px solid var(--line);border-radius:12px;padding:22px;position:sticky;top:18px}.controls h2{margin:0;font-size:19px}.small{color:var(--muted);font-size:12px}.controls label{display:block;font-size:12px;font-weight:650;margin-top:15px}.controls input[type=number],select{width:100%;border:1px solid #c6d4d2;border-radius:6px;padding:8px;margin-top:5px;background:#fff;color:var(--ink)}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.controls .checkbox{display:flex;align-items:center;gap:8px;font-weight:500}button{border:0;border-radius:7px;background:var(--teal);color:white;font-weight:650;padding:11px 16px;cursor:pointer}button:hover{filter:brightness(.92)}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--gold);outline-offset:2px}button:disabled{opacity:.5;cursor:wait}.controls button{width:100%;margin-top:18px}.secondary{background:#e9f1ef;color:var(--teal)}.decision{background:#fff;border:1px solid var(--line);border-left:5px solid var(--teal);padding:23px;border-radius:10px}.decision h2{margin:0 0 7px;font-size:25px}.decision p{margin:7px 0;font-size:14px}.badge{display:inline-block;padding:3px 8px;border-radius:4px;background:#def1e8;color:#125743;font-weight:700;font-size:11px;white-space:nowrap}.badge.fail{background:#fbe7e7;color:var(--red)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:18px 0}.metric{background:#fff;border:1px solid var(--line);padding:18px;border-radius:9px}.metric span{display:block;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}.metric strong{display:block;font-size:30px;letter-spacing:-.04em;margin:4px 0}.metric small{color:var(--muted);font-size:11px}.panel{background:#fff;border:1px solid var(--line);border-radius:10px;padding:23px;margin-bottom:20px}.panel h2{font-size:19px;margin:0 0 7px}.panel p{margin:6px 0 16px;font-size:13px;color:var(--muted)}.scroll{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.035em;background:#f5f8f7}th,td{padding:12px 10px;border-bottom:1px solid #e8eeec;vertical-align:top}td:first-child{font-weight:600}td .rule{display:block;font-weight:400;color:var(--red);font-size:11px;margin-top:5px;min-width:120px}.allocation{display:flex;height:28px;border-radius:5px;overflow:hidden;margin:16px 0 10px}.allocation div{display:flex;align-items:center;justify-content:center;color:white;font-size:11px;font-weight:650;min-width:0}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px}.dot{display:inline-block;height:9px;width:9px;border-radius:50%;margin-right:5px}.signal-box{background:#edf5f2;border:1px solid #cce1d8;border-radius:7px;padding:14px;margin:13px 0;font-size:13px}.warning{background:#fff7e7;border-left:3px solid var(--gold);padding:12px 15px;color:#665125;font-size:12px;margin-top:14px}.error{background:#fbe7e7;border:1px solid #df9999;color:var(--red);padding:16px;border-radius:8px;margin-bottom:15px}details{margin-top:16px;font-size:13px}summary{cursor:pointer;font-weight:650}.footer{font-size:11px;color:var(--muted);padding:5px 0 30px}.actions{display:flex;align-items:center;gap:14px;margin-bottom:18px}.actions .small{margin-left:auto}.chart{width:100%;height:210px;display:block;margin:10px 0}.loading{padding:25px;color:var(--muted)}[hidden]{display:none!important}@media(max-width:980px){.layout{grid-template-columns:240px minmax(0,1fr);gap:16px;padding:0 20px}.metrics{grid-template-columns:1fr}.metric strong{font-size:26px}}@media(max-width:720px){.layout{display:block;margin-top:18px;padding:0 15px}.controls{position:static;margin-bottom:20px}.metrics{grid-template-columns:repeat(3,1fr);gap:6px}.metric{padding:11px}.metric strong{font-size:23px}.metric span{font-size:9px}.panel{padding:17px}header{padding:25px 20px}.actions{flex-wrap:wrap}.actions .small{margin-left:0}.controls .fields{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.controls .fields>label{min-width:0}.pair{display:contents}}
+</style>
+</head>
+<body>
+<header>
+ <div class="eyebrow">INVESTMENT PROCESS REVIEW · PROJECT 2</div>
+ <h1>A portfolio you can question.</h1>
+ <p>Compare two simple portfolios with a constrained allocation. Change an assumption, check the rules, and see whether the decision survives.</p>
+ <div class="header-meta"><span class="pill">Historical cutoff · 30 Sep 2026</span><span class="pill">5 ETFs · 7-year hypothetical investor</span><span class="pill">Local Python app · Frozen inputs</span></div>
+</header>
+<div class="layout">
+<aside class="controls">
+ <h2>Test the mandate</h2><p class="small">Percent inputs use whole numbers: 6.5 means 6.5%. Recalculate to apply changes.</p>
+ <form id="controls">
+ <div class="fields">
+ <label>Estimation window<select name="window_months"><option value="36">36 monthly returns</option><option value="60">60 monthly returns</option></select></label>
+ <label>Annual return target (%)<input name="target_return" type="number" value="6.5" step="0.1" min="0" max="30" required></label>
+ <div class="pair"><label>Risk ceiling (%)<input name="max_volatility" type="number" value="15" step="0.5" min="0.1" max="100" required></label><label>Fund cap (%)<input name="max_weight" type="number" value="60" step="5" min="0" max="100" required></label></div>
+ <div class="pair"><label>Minimum BIL (%)<input name="min_bil" type="number" value="10" step="5" min="0" max="100" required></label><label>Turnover cap (%)<input name="max_turnover" type="number" value="25" step="5" min="0" max="100" required></label></div>
+ <label>Trading cost (bps per side)<input name="cost_bps" type="number" value="10" step="5" min="0" max="1000" required></label>
+ <label>Equity estimate shift (percentage points)<input name="equity_shift_pp" type="number" value="0" step="0.5" min="-20" max="20" required></label>
+ <label>Additional publication lag (days)<input name="extra_lag_days" type="number" value="0" step="1" min="0" max="120" required></label>
+ </div>
+ <label class="checkbox"><input name="use_signal" type="checkbox" checked> Use unemployment risk rule</label>
+ <button id="calculate" type="submit">Recalculate portfolio →</button>
+ <button class="secondary" id="reset" type="button">Restore approved base</button>
+ </form>
+ <p class="small">Starting allocation: 60% VOO / 40% BIL. Long-only. No withdrawals. Trading costs apply to both purchases and sales.</p>
+</aside>
+<main>
+ <div id="error" class="error" role="alert" hidden></div><div id="loading" class="loading" role="status">Calculating portfolios from the frozen data…</div>
+ <div id="results" hidden aria-live="polite">
+ <section class="decision"><div class="small" id="scenario-label"></div><h2 id="decision"></h2><p id="decision-line"></p><div class="warning">Research allocation only. Live capital: 0%. A passing estimate is not a guaranteed return or a maximum-loss promise.</div></section>
+ <div class="metrics"><div class="metric"><span>Estimated net return</span><strong id="net"></strong><small>Annual arithmetic estimate, after trade cost</small></div><div class="metric"><span>Estimated volatility</span><strong id="risk"></strong><small>Annualized monthly standard deviation</small></div><div class="metric"><span>One-way turnover</span><strong id="turnover"></strong><small>From the assumed starting portfolio</small></div></div>
+ <section class="panel"><h2>The proposed allocation</h2><p>Weights inside the simulated sleeve. The grid uses 5-percentage-point steps.</p><div id="allocation" class="allocation"></div><div id="legend" class="legend"></div><p class="small" id="feasible"></p></section>
+ <section class="panel"><h2>Three approaches. The same rules.</h2><p>Equal weight can fail even when its return looks attractive: the move from today's assumed holdings also has to fit the turnover limit.</p><div class="scroll"><table><thead><tr><th>Portfolio</th><th>Net return</th><th>Volatility</th><th>Turnover</th><th>Verdict</th></tr></thead><tbody id="comparisons"></tbody></table></div><details><summary>Inspect every mandate check</summary><div class="scroll"><table><thead><tr><th>Portfolio</th><th>Rule</th><th>Measured</th><th>Limit</th><th>Result</th></tr></thead><tbody id="checks"></tbody></table></div></details></section>
+ <section class="panel"><h2>What was actually knowable?</h2><p>The unemployment signal uses publication dates and historical revisions, not today's revised history at an earlier date.</p><div id="signal" class="signal-box"></div><div class="scroll"><table><thead><tr><th>Measured month</th><th>Publication date</th><th>Unemployment rate</th><th>Source row</th></tr></thead><tbody id="signal-rows"></tbody></table></div><p class="small">A rise of at least 0.10 percentage point raises the BIL floor to 40%. Missing consecutive months or data older than 100 days block new orders. This rule is a research assumption, not established predictive evidence.</p></section>
+ <section class="panel"><h2>Where the process bends—or stops</h2><p>Each scenario changes the named input relative to the current form. These automated checks are separate from the student's AI-off prediction.</p><div class="scroll"><table><thead><tr><th>Scenario</th><th>Action</th><th>Net return</th><th>Volatility</th><th>Allocation: VOO / FNDX / BIL*</th></tr></thead><tbody id="stresses"></tbody></table></div><p class="small">*Full five-fund allocations are included in the downloaded result.</p></section>
+ <section class="panel"><h2>A historical reality check</h2><p>October 2024–September 2026. Annual September decisions, each using 36 trailing monthly returns. Lines show growth of $1 after modeled trading costs.</p><svg id="chart" class="chart" viewBox="0 0 760 210" role="img" aria-label="Growth of one dollar for the three portfolios"></svg><div id="chart-legend" class="legend"></div><div class="scroll"><table><thead><tr><th>Process</th><th>Compound annual return</th><th>Realized volatility</th><th>Max drawdown</th></tr></thead><tbody id="backtest"></tbody></table></div><p class="small" id="no-signal"></p><div class="warning">This short retrospective diagnostic is not an untouched holdout. Prices are revised snapshots; only the unemployment series has publication-vintage filtering. Baselines trade even when they fail the mandate, with breaches recorded. Missing signals stop new constrained trades; retained holdings are monitored.</div></section>
+ <div class="actions"><button id="download" type="button">Download this result · JSON</button><span class="small">Changes here do not overwrite the saved base report.</span></div>
+ <div class="footer">AI announcement: Codex (GPT-6) assisted with code, data processing, validation and drafting. The submitting analyst is responsible for reviewing the analysis and owning the final decision. Education, not investment advice.<br>Model assumption: equity arithmetic return estimates are capped at 10% before the scenario shift. No tax model. Fund overlap and future regime changes remain risks.</div>
+ </div>
+</main>
+</div>
+<script>
+const colors=['#b57c36','#547d91','#215d78','#2d8a77','#a08a49'];
+let baseConfig, lastReport;
+const el=id=>document.getElementById(id), pct=x=>(x*100).toFixed(2)+'%', pp=x=>(x*100).toFixed(0)+'%';
+const escapeText=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const badge=ok=>'<span class="badge '+(ok?'':'fail')+'">'+(ok?'PASS':'FAIL')+'</span>';
+function render(r){
+ lastReport=r;
+ const p=r.portfolios[2];
+ el('scenario-label').textContent='AS OF '+r.config.decision_date+' · '+r.estimates.months+'-MONTH ESTIMATION WINDOW';
+ el('decision').textContent=r.decision==='PILOT'?'Pilot the process. Keep live capital at zero.':'Reject this allocation under the current inputs.';
+ el('decision-line').textContent=r.decision_line;
+ el('net').textContent=p?pct(p.net_return):'—';el('risk').textContent=p?pct(p.volatility):'—';el('turnover').textContent=p?pct(p.turnover):'—';
+ el('allocation').innerHTML=p?Object.entries(p.weights).map(([t,w],i)=>w?`<div style="width:${w*100}%;background:${colors[i]}">${w>=.1?escapeText(t)+' '+pp(w):pp(w)}</div>`:'').join(''):'';
+ el('legend').innerHTML=p?Object.entries(p.weights).map(([t,w],i)=>`<span><i class="dot" style="background:${colors[i]}"></i>${t} ${pp(w)}</span>`).join(''):'No portfolio satisfies all active rules.';
+ el('feasible').textContent=r.feasible_count+' feasible allocations out of 10,626 possible grid portfolios.';
+ el('comparisons').innerHTML=r.portfolios.map(x=>x?`<tr><td>${escapeText(x.name)}</td><td>${pct(x.net_return)}</td><td>${pct(x.volatility)}</td><td>${pct(x.turnover)}</td><td>${badge(x.passed)}${x.failed_rules.map(f=>'<span class="rule">'+escapeText(f)+'</span>').join('')}</td></tr>`:'<tr><td>Constrained portfolio</td><td colspan="3">No feasible allocation</td><td>'+badge(false)+'</td></tr>').join('');
+ el('checks').innerHTML=r.portfolios.filter(Boolean).flatMap(x=>x.checks.map(c=>`<tr><td>${escapeText(x.name)}</td><td>${escapeText(c.rule)}</td><td>${c.value===null?'—':pct(c.value)}</td><td>${c.limit===null?'—':pct(c.limit)}</td><td>${badge(c.passed)}</td></tr>`)).join('');
+ const s=r.signal;
+ el('signal').textContent=s.available?`Latest knowable change: ${s.rise_pp>=0?'+':''}${s.rise_pp.toFixed(2)} percentage points. Defensive condition: ${s.defensive?'ON':'OFF'}. Rule ${r.config.use_signal?'enabled':'disabled for this diagnostic'}. ${s.excluded_future_rows.length} future publication rows excluded.`:s.reason;
+ el('signal-rows').innerHTML=s.selected_rows.map(x=>`<tr><td>${escapeText(x['month measured'])}</td><td>${escapeText(x['published on'])}</td><td>${Number(x.value).toFixed(1)}%</td><td>${escapeText(x.row)}</td></tr>`).join('');
+ el('stresses').innerHTML=r.stresses.map(x=>{const q=x.portfolio;return `<tr><td>${escapeText(x.scenario)}</td><td><span class="badge ${q?'':'fail'}">${x.decision}</span></td><td>${q?pct(q.net_return):'—'}</td><td>${q?pct(q.volatility):'—'}</td><td>${q?[q.weights.VOO,q.weights.FNDX,q.weights.BIL].map(pp).join(' / '):'No feasible mix'}</td></tr>`}).join('');
+ el('backtest').innerHTML=r.walk_forward.results.map(x=>`<tr><td>${escapeText(x.name)}</td><td>${pct(x.cagr)}</td><td>${pct(x.volatility)}</td><td>${pct(x.max_drawdown)}</td></tr>`).join('');
+ el('no-signal').textContent='Constrained process without the macro rule: '+pct(r.without_signal.results[0].cagr)+' annualized compound return. '+r.walk_forward.monitoring.length+' monitoring events are recorded in the JSON.';
+ chart(r.walk_forward.results);
+ el('loading').hidden=true;el('results').hidden=false;
+}
+function chart(series){
+ const vals=series.flatMap(s=>s.wealth), min=Math.min(...vals)*.97,max=Math.max(...vals)*1.03;
+ const px=i=>45+i*690/24,py=v=>175-(v-min)/(max-min)*150, shades=['#2d8a77','#b57c36','#215d78'];
+ let out='';for(let i=0;i<4;i++){const v=min+(max-min)*i/3,y=py(v);out+=`<line x1="45" y1="${y}" x2="735" y2="${y}" stroke="#e3ebe8"/><text x="0" y="${y+4}" fill="#556b76" font-size="11">$${v.toFixed(2)}</text>`;}
+ series.forEach((s,i)=>out+=`<polyline points="${s.wealth.map((v,k)=>px(k)+','+py(v)).join(' ')}" fill="none" stroke="${shades[i]}" stroke-width="2.5"/>`);
+ out+='<text x="45" y="202" font-size="11" fill="#556b76">Sep 2024</text><text x="355" y="202" font-size="11" fill="#556b76">Sep 2025</text><text x="680" y="202" font-size="11" fill="#556b76">Sep 2026</text>';
+ el('chart').innerHTML=out;el('chart-legend').innerHTML=series.map((s,i)=>`<span><i class="dot" style="background:${shades[i]}"></i>${escapeText(s.name)}</span>`).join('');
+}
+function fill(c){for(const [name,value] of Object.entries(c)){const input=el('controls').elements.namedItem(name);if(!input)continue;if(input.type==='checkbox')input.checked=value;else input.value=['target_return','max_volatility','max_weight','min_bil','max_turnover'].includes(name)?value*100:value;}}
+async function calculate(config){
+ el('error').hidden=true;el('calculate').disabled=true;el('calculate').textContent='Calculating…';
+ try{const response=await fetch('/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(config)});const r=await response.json();if(!response.ok)throw new Error(r.error);render(r);}
+ catch(e){el('error').textContent=e.message;el('error').hidden=false;}
+ finally{el('calculate').disabled=false;el('calculate').textContent='Recalculate portfolio →';}
+}
+el('controls').addEventListener('submit',e=>{e.preventDefault();if(!baseConfig)return;const c=structuredClone(baseConfig);for(const input of el('controls').elements){if(!input.name)continue;c[input.name]=input.type==='checkbox'?input.checked:Number(input.value);if(['target_return','max_volatility','max_weight','min_bil','max_turnover'].includes(input.name))c[input.name]/=100;}calculate(c);});
+el('reset').addEventListener('click',()=>{if(baseConfig){fill(baseConfig);calculate(baseConfig);}});
+el('download').addEventListener('click',()=>{if(!lastReport)return;const blob=new Blob([JSON.stringify(lastReport,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='portfolio-scenario.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+fetch('/api/results').then(async x=>{if(!x.ok)throw new Error('Unable to load the frozen data.');return x.json();}).then(r=>{baseConfig=structuredClone(r.config);fill(baseConfig);render(r);}).catch(e=>{el('loading').hidden=true;el('error').hidden=false;el('error').textContent=e.message;});
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "decision_date": "2026-09-30",
+  "window_months": 36,
+  "target_return": 0.08,
+  "max_volatility": 0.15,
+  "max_weight": 0.6,
+  "min_bil": 0.1,
+  "max_turnover": 0.25,
+  "cost_bps": 10.0,
+  "equity_return_cap": 0.1,
+  "equity_shift_pp": 0.0,
+  "extra_lag_days": 0,
+  "use_signal": true,
+  "signal_rise_pp": 0.1,
+  "defensive_min_bil": 0.4,
+  "max_signal_age_days": 100,
+  "current_weights": {
+    "EWY": 0.0,
+    "QQQM": 0.0,
+    "VOO": 0.6,
+    "FNDX": 0.0,
+    "BIL": 0.4
+  }
+}
