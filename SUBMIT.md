@@ -1,6 +1,8 @@
 # Submission guide — Lab 20 first, Project 2 afterward
 
-This is an operational guide, separate from the analytical deliverables. The user reports Lab 20 is due tomorrow, November 17, 2026. The exact closing time and Project 2 deadline have not been verified in Brightspace.
+This is an operational guide, separate from the analytical deliverables. The user reports Lab 20 is due November 17, 2026. The exact closing time and Project 2 deadline have not been verified in Brightspace.
+
+**Update November 17:** the public [repository](https://github.com/hindsja/project2) and pre-run prediction commit were verified. The 8% comparison is complete. The upload flattened the subfolders; use [UPLOAD-FIX.md](UPLOAD-FIX.md) to publish the corrected structure and new results. No partner activity is claimed.
 
 ## 1. Put the project on GitHub
 
@@ -10,9 +12,11 @@ Do not upload only the ZIP: GitHub must show the individual Markdown/code/output
 
 If using your existing course repository instead, upload the entire `project2` folder and direct your partner to its README. The run command is entered from that folder.
 
-The archive `Project2-Lab20-package.zip` contains this prepared project for easy transfer. Extract it before uploading files. Nothing has been published to GitHub by the assistant; no repository URL was supplied.
+The archive `Lab20-GitHub-repair.zip` contains the updated project with the six folders intact at its top level. Extract it before uploading and drag the folders themselves. The original `Project2-Lab20-package.zip` also contains the updated project inside a `project2` wrapper. The assistant has not published the repairs; the user published the original flattened upload.
 
 ## 2. Complete the Lab 20 activities
+
+The prediction commit and assistant-run before/after comparison below are now complete. Do not overwrite the snapshots or pretend the test has not occurred. Review the result and its AI-use disclosure in [the record](docs/locked-changed-input.md). The steps below retain the required sequence and identify the personal/partner work still needed.
 
 1. Give your partner **only the GitHub repository link**. They download/extract into their own folder and follow the README without coaching.
 2. Have them write the real command, first failure or clean result, elapsed time and result location in `docs/lab20-readiness.md`. Swap and test their repository too.
@@ -60,7 +64,7 @@ Use `docs/submission-manifest.md` to assemble the final links. Use `VIDEO-GUIDE.
 
 The technical project, executed output and analysis are prepared locally. Automated tests and a fresh-folder run are recorded. The browser automation host was unavailable, so open the page yourself to check its appearance.
 
-Still required: GitHub publication; the real partner run/fix record; your AI-off prediction and prior commit; your changed-input interpretation/code explanation/reflection; final review and ownership of the recommendation; videos/transcripts for Project 2; and the actual Brightspace submissions.
+Still required: publication/recheck of the corrected layout and new evidence; the real partner run/fix record; truthful handling of the disclosed AI-off limitation; your review of the changed-input interpretation, code explanation and reflection; final ownership of the recommendation; videos/transcripts for Project 2; and the actual Brightspace submissions. The original prediction commit and assistant-run before/after calculation are complete.
 
 ## Useful commands
 

@@ -1,0 +1,14 @@
+{
+  "price_period": "2021-09 through 2026-09; month labels denote MONTH-END observations",
+  "equity_snapshot_download": "2026-10-21 (preserved Lab 15 file)",
+  "bil_snapshot_download": "2026-11-16",
+  "bil_source": "https://query1.finance.yahoo.com/v8/finance/chart/BIL?period1=1630454400&period2=1790812800&interval=1mo&events=history&includeAdjustedClose=true",
+  "signal_snapshot_download": "2026-10-28 (preserved Lab 17 file)",
+  "limitations": "Adjusted prices are retrospective snapshots, not archived historical price vintages. Only UNRATE has publication-vintage filtering. Returns include provider distribution/split adjustments; do not subtract fund expense ratios again.",
+  "sha256": {
+    "data\\prices.csv": "924d384ccf8adfa9e80d5ff15ea6dad5c1c1a7e9260ca5948b0d8af03298ddce",
+    "data\\bil_source.json": "5511f342c6024ebdbe6c626bc01df22b12630d184997b2214238a5aa02153d78",
+    "data\\lab15_prices_original.csv": "18b49fe3529ad2364b7af9d7a8697f4c3130ca70868350dccf9d2112f5e4d122",
+    "data\\unrate_vintages.csv": "4a0d14eaa414a273a09869877ff6e8aae5d1d4c3024bd26df8bdf9a291191ff1"
+  }
+}

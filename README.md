@@ -61,7 +61,13 @@ python tools/cold_run.py
 | `docs/locked-changed-input.md` | Human-only prediction and subsequent result; still pending |
 | `SUBMIT.md` | What to upload and what to submit for each assignment |
 
-## Locked changed-input workflow
+## Locked changed-input evidence
+
+The student selected a return-target increase from 6.5% to 8.0%. The prediction was verified in [GitHub commit ca88b25](https://github.com/hindsja/project2/commit/ca88b2520a0c83c1908c9853b3756db0dffe3768) before the assistant ran the test. The [completed comparison](docs/locked-changed-input.md) shows volatility rising from 4.8995% to 7.8972%, weights changing to 55% VOO / 10% FNDX / 35% BIL, and PILOT remaining unchanged. The record preserves the disclosure that the prediction was supplied/clarified in chat; it does not certify an AI-off phase.
+
+The original public upload flattened the subfolders. See [upload audit](docs/repository-upload-audit.md) and [repair instructions](UPLOAD-FIX.md). Corrected structure and new evidence must be published before their GitHub links are usable.
+
+### Workflow reference for a future new test
 
 The automated stress suite is **not** the required human-authored record. Close AI before choosing a new input/value and writing the prediction in `docs/locked-changed-input.md`. Record the old/new values, units, expected numerical direction and decision effect. Commit and push that prediction **before** running the changed case; preserve its commit link. Do not claim a prediction for a scenario whose result you have already seen.
 
@@ -78,4 +84,4 @@ These commands create `outputs/snapshots/lab20-before/` and `outputs/snapshots/l
 
 The 24-month chronological diagnostic is retrospective, with only two annual rebalances; it is not an untouched holdout. Baselines execute their fixed rules even when they fail the mandate; failures are exposed in trade logs. The constrained process retains existing holdings when new orders are blocked. Weight drift is monitored, not automatically traded away. Annualized volatility is not a maximum-loss guarantee. The equity-return ceiling, signal threshold, starting weights and transaction costs are modeling assumptions, not proven forecasts.
 
-The student AI-off prediction, partner cold run/code explanation, final analyst review, GitHub publication and three recorded videos/transcripts are **not claimed complete**. See [Lab 20](docs/lab20-readiness.md) and [submission guide](SUBMIT.md). The final recommendation can remain a truthful pilot or reject.
+The original prediction is publicly committed and the assistant-run comparison is complete. Publication of the corrected repository structure/new evidence, the verified AI-off phase, partner cold run/code explanation, personal reflection, final analyst review and three recorded videos/transcripts are **not claimed complete**. See [Lab 20](docs/lab20-readiness.md) and [submission guide](SUBMIT.md). The final recommendation can remain a truthful pilot or reject.

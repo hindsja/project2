@@ -1,0 +1,125 @@
+{
+  "repository": "https://github.com/hindsja/project2",
+  "inspected_commit": "ca88b2520a0c83c1908c9853b3756db0dffe3768",
+  "prediction_commit_timestamp_utc": "2026-11-17T21:54:49Z",
+  "audit_timestamp_utc": "2026-11-17T22:00:27.136511+00:00",
+  "actor": "AI-assisted repository inspection and execution; not partner cold run",
+  "prepared_files_present_by_content": 33,
+  "missing_file_contents": [],
+  "misplaced_files": [
+    {
+      "expected_path": ".gitignore",
+      "uploaded_path": "download"
+    },
+    {
+      "expected_path": "data/bil_source.json",
+      "uploaded_path": "bil_source.json"
+    },
+    {
+      "expected_path": "data/lab15_prices_original.csv",
+      "uploaded_path": "lab15_prices_original.csv"
+    },
+    {
+      "expected_path": "data/prices.csv",
+      "uploaded_path": "prices.csv"
+    },
+    {
+      "expected_path": "data/provenance.json",
+      "uploaded_path": "provenance.json"
+    },
+    {
+      "expected_path": "data/unrate_vintages.csv",
+      "uploaded_path": "unrate_vintages.csv"
+    },
+    {
+      "expected_path": "docs/data-card.md",
+      "uploaded_path": "data-card.md"
+    },
+    {
+      "expected_path": "docs/decision-memo.md",
+      "uploaded_path": "decision-memo.md"
+    },
+    {
+      "expected_path": "docs/lab20-readiness.md",
+      "uploaded_path": "lab20-readiness.md"
+    },
+    {
+      "expected_path": "docs/locked-changed-input.md",
+      "uploaded_path": "locked-changed-input.md"
+    },
+    {
+      "expected_path": "docs/mandate.md",
+      "uploaded_path": "mandate.md"
+    },
+    {
+      "expected_path": "docs/submission-manifest.md",
+      "uploaded_path": "submission-manifest.md"
+    },
+    {
+      "expected_path": "docs/validation-and-ai-use.md",
+      "uploaded_path": "validation-and-ai-use.md"
+    },
+    {
+      "expected_path": "outputs/automated-cold-run.json",
+      "uploaded_path": "automated-cold-run.json"
+    },
+    {
+      "expected_path": "outputs/decision-output.md",
+      "uploaded_path": "decision-output.md"
+    },
+    {
+      "expected_path": "outputs/results.json",
+      "uploaded_path": "results.json"
+    },
+    {
+      "expected_path": "outputs/test-results.txt",
+      "uploaded_path": "test-results.txt"
+    },
+    {
+      "expected_path": "outputs/verification.json",
+      "uploaded_path": "verification.json"
+    },
+    {
+      "expected_path": "static/index.html",
+      "uploaded_path": "index.html"
+    },
+    {
+      "expected_path": "tests/test_engine.py",
+      "uploaded_path": "test_engine.py"
+    },
+    {
+      "expected_path": "tools/cold_run.py",
+      "uploaded_path": "cold_run.py"
+    },
+    {
+      "expected_path": "tools/prepare_data.py",
+      "uploaded_path": "prepare_data.py"
+    },
+    {
+      "expected_path": "tools/sync_record.py",
+      "uploaded_path": "sync_record.py"
+    }
+  ],
+  "raw_upload_run": {
+    "command": "python app.py --export",
+    "exit_code": 1,
+    "first_failure": "FileNotFoundError: data/prices.csv; all six required subfolders were flattened"
+  },
+  "restored_structure_run": {
+    "command": "python app.py --export",
+    "exit_code": 0,
+    "change": "Restored original files to expected folders; portfolio code unchanged"
+  },
+  "restored_structure_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "exit_code": 0,
+    "test_count": 19
+  },
+  "prediction_part_a_unchanged": true,
+  "changed_keys": [
+    "target_return"
+  ],
+  "before_run_timestamp_utc": "2026-11-17T21:57:57.019354+00:00",
+  "after_run_timestamp_utc": "2026-11-17T21:57:57.586671+00:00",
+  "publication_of_repairs": "Pending; prepared locally"
+}

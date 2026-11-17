@@ -1,0 +1,24 @@
+test_base_feasibility_and_baseline_failure (test_engine.FinancialTests.test_base_feasibility_and_baseline_failure) ... ok
+test_covariance_and_return_known_answer (test_engine.FinancialTests.test_covariance_and_return_known_answer) ... ok
+test_duplicate_price_month_rejected (test_engine.FinancialTests.test_duplicate_price_month_rejected) ... ok
+test_estimates_independent_portfolio_series (test_engine.FinancialTests.test_estimates_independent_portfolio_series) ... ok
+test_future_prices_do_not_change_first_rebalance (test_engine.FinancialTests.test_future_prices_do_not_change_first_rebalance) ... ok
+test_future_releases_cannot_change_prior_signal (test_engine.FinancialTests.test_future_releases_cannot_change_prior_signal) ... ok
+test_grid_complete_and_fully_invested (test_engine.FinancialTests.test_grid_complete_and_fully_invested) ... ok
+test_infeasible_constraints_do_not_relax (test_engine.FinancialTests.test_infeasible_constraints_do_not_relax) ... ok
+test_invalid_config_rejected (test_engine.FinancialTests.test_invalid_config_rejected) ... ok
+test_missing_october_stops_signal (test_engine.FinancialTests.test_missing_october_stops_signal) ... ok
+test_month_labels_are_end_of_month (test_engine.FinancialTests.test_month_labels_are_end_of_month) ... ok
+test_publication_lag_excludes_by_effective_date (test_engine.FinancialTests.test_publication_lag_excludes_by_effective_date) ... ok
+test_snapshot_prices_match_originals_and_raw_bil (test_engine.FinancialTests.test_snapshot_prices_match_originals_and_raw_bil) ... ok
+test_snapshots_preserve_inputs_and_refuse_overwrite (test_engine.FinancialTests.test_snapshots_preserve_inputs_and_refuse_overwrite) ... ok
+test_stale_signal_blocks_new_allocation (test_engine.FinancialTests.test_stale_signal_blocks_new_allocation) ... ok
+test_turnover_and_cost_count_both_sides (test_engine.FinancialTests.test_turnover_and_cost_count_both_sides) ... ok
+test_bad_inputs_and_unknown_paths (test_engine.HTTPTests.test_bad_inputs_and_unknown_paths) ... ok
+test_home_and_health (test_engine.HTTPTests.test_home_and_health) ... ok
+test_interactive_change_recalculates_verdict (test_engine.HTTPTests.test_interactive_change_recalculates_verdict) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.807s
+
+OK
