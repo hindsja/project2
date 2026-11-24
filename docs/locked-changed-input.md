@@ -93,23 +93,50 @@ Student financial reason, preserved verbatim:
 
 These statements are the student's untested prediction, not a verified description of the optimizer. Their substantive accuracy has not been evaluated here before the frozen experiment.
 
-### Immutable evidence — complete after publication
+### Immutable prediction evidence — verified after execution
 
-- Prediction GitHub commit URL: PENDING publication.
-- Commit timestamp: PENDING publication.
+- Prediction commit: [d4b657f9f6be3dc352fcf2cbb08c73c5eab3ed84](https://github.com/hindsja/project2/commit/d4b657f9f6be3dc352fcf2cbb08c73c5eab3ed84).
+- Immutable prediction file: [record at the pre-run commit](https://github.com/hindsja/project2/blob/d4b657f9f6be3dc352fcf2cbb08c73c5eab3ed84/docs/locked-changed-input.md).
+- Immutable configuration: [final-changed-config.json at that commit](https://github.com/hindsja/project2/blob/d4b657f9f6be3dc352fcf2cbb08c73c5eab3ed84/final-changed-config.json).
+- GitHub committer timestamp: November 23, 2026, 8:36:50 PM EST / November 24, 2026, 01:36:50 UTC.
+- Verification scope: after execution, the assistant downloaded the immutable record and configuration. The prediction matched the local pre-run record and the published configuration matched the saved changed-run configuration. The commit timestamp precedes both saved run timestamps. This is retrospective chronology verification, not an independent observation of the student's AI-off activity or of the file's availability before execution.
 
-### Part B — complete after running with AI closed
+### Part B — actual result and post-run explanation
 
-- Actual commands and run timestamps: PENDING.
-- Before output link: PENDING.
-- After output link: PENDING.
-- Before / after weights: PENDING.
-- Before / after estimated net return: PENDING.
-- Before / after estimated volatility: PENDING.
-- Before / after turnover: PENDING.
-- Before / after committee decision: PENDING.
-- Student explanation of agreement/difference: PENDING.
-- Failure or limitation and follow-up: PENDING.
+The student reported personally running both commands. The assistant read the saved files afterward and did not execute this changed-input experiment. The original prediction was supplied in chat, and the post-run interpretation below includes AI assistance; neither is represented as verified AI-off work.
 
-Expected output paths, not yet claimed to exist: `outputs/snapshots/final-before/` and `outputs/snapshots/final-after/`. Preserve any failed run and use new labels if those folders already exist.
+| Evidence | Recorded value |
+|---|---|
+| Before command | `python app.py --snapshot final-before` (the instructions used the existing `.venv-lab15` Python executable) |
+| After command | `python app.py --config final-changed-config.json --snapshot final-after` |
+| Before run | 2026-11-24T01:39:23.571687+00:00 / November 23, 2026, 8:39:23 PM EST |
+| After run | 2026-11-24T01:39:33.942975+00:00 / November 23, 2026, 8:39:33 PM EST |
+| Before evidence | [JSON](../outputs/snapshots/final-before/results.json), [readable output](../outputs/snapshots/final-before/decision-output.md) |
+| After evidence | [JSON](../outputs/snapshots/final-after/results.json), [readable output](../outputs/snapshots/final-after/decision-output.md) |
+| Configuration comparison | Only `max_volatility` changes, from 0.15 to 0.20 |
 
+| Measure | Before: 15% ceiling | After: 20% ceiling |
+|---|---:|---:|
+| EWY / QQQM / VOO / FNDX / BIL weights | 0% / 0% / 35% / 5% / 60% | 0% / 0% / 35% / 5% / 60% |
+| Estimated annual net return | 6.5696% | 6.5696% |
+| Estimated annualized volatility | 4.8995% | 4.8995% |
+| One-way turnover | 25.00% | 25.00% |
+| Transition trading cost | 0.0500% | 0.0500% |
+| Mandate verdict | PASS | PASS |
+| Committee decision | PILOT | PILOT |
+
+#### Student's post-run response, preserved verbatim
+
+> my prediction was right because the estimated volatility was not at its maximum allowable so it had no need to change because it was already optimized. based on the results my recomendation is still pilot/the same as the initial..
+
+This response followed the assistant's explanation that the optimizer minimizes volatility subject to the return target and other constraints. It is not described as an unaided diagnosis.
+
+#### Edited interpretation — AI-assisted, with the original prediction preserved
+
+The prediction was **partly supported**. The PILOT recommendation remained unchanged, and the conditional prediction that weights would stay the same when the original volatility ceiling was not reached matched the result. The explicit prediction that estimated volatility would increase did **not** occur: it remained 4.8995%.
+
+The original 15% ceiling was not binding because the selected portfolio's estimated volatility was already about 4.90%. The optimizer minimizes estimated volatility while meeting the 6.5% estimated net-return target and the other mandate constraints. It does not maximize return by using the entire risk allowance. Raising only the ceiling to 20% did not make the existing minimum-volatility feasible allocation less desirable. Any portfolios newly admitted by a higher volatility ceiling would have higher volatility than the selected portfolio. Thus weights, estimated return, turnover and the decision stayed unchanged.
+
+The student's final recommendation remains **PILOT**, as initially proposed: a 5–10% simulated sleeve and 0% live allocation, with the existing monitoring and stop rules. No model correction was needed for this result. The misconception in the initial rationale concerned the optimization objective, not a demonstrated software failure.
+
+**Limitation:** this experiment confirms behavior when a nonbinding upper risk limit is relaxed; it does not establish robustness when a binding constraint changes or validate expected returns. Other stresses remain separate evidence. The pre-run prediction's chat involvement and the post-run AI assistance remain disclosed; a successful commit/run sequence alone does not certify the required AI-off prediction phase.

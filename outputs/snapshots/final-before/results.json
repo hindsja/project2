@@ -1,0 +1,1632 @@
+{
+  "config": {
+    "decision_date": "2026-09-30",
+    "window_months": 36,
+    "target_return": 0.065,
+    "max_volatility": 0.15,
+    "max_weight": 0.6,
+    "min_bil": 0.1,
+    "max_turnover": 0.25,
+    "cost_bps": 10.0,
+    "equity_return_cap": 0.1,
+    "equity_shift_pp": 0.0,
+    "extra_lag_days": 0,
+    "use_signal": true,
+    "signal_rise_pp": 0.1,
+    "defensive_min_bil": 0.4,
+    "max_signal_age_days": 100,
+    "current_weights": {
+      "EWY": 0.0,
+      "QQQM": 0.0,
+      "VOO": 0.6,
+      "FNDX": 0.0,
+      "BIL": 0.4
+    }
+  },
+  "estimates": {
+    "raw_returns": [
+      0.49183067719052115,
+      0.26454907290684493,
+      0.21492328744874095,
+      0.19988901704752365,
+      0.043659731156158996
+    ],
+    "returns": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.043659731156158996
+    ],
+    "covariance": [
+      [
+        0.1812473704578679,
+        0.047307262137628696,
+        0.02986208165975542,
+        0.024982364365710382,
+        -0.0002538957027263137
+      ],
+      [
+        0.047307262137628696,
+        0.02974677076604984,
+        0.019559887727552093,
+        0.012923903188141348,
+        3.567491937808811e-05
+      ],
+      [
+        0.02986208165975542,
+        0.019559887727552093,
+        0.015492487035622884,
+        0.012636459794104252,
+        5.484560331614612e-05
+      ],
+      [
+        0.024982364365710382,
+        0.012923903188141348,
+        0.012636459794104252,
+        0.013650702767315342,
+        2.6254913392764838e-05
+      ],
+      [
+        -0.0002538957027263137,
+        3.567491937808811e-05,
+        5.484560331614612e-05,
+        2.6254913392764838e-05,
+        4.557463257324748e-06
+      ]
+    ],
+    "start": "2023-09-30",
+    "end": "2026-09-30",
+    "months": 36
+  },
+  "signal": {
+    "available": true,
+    "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+    "rise_pp": 0.0,
+    "defensive": false,
+    "selected_rows": [
+      {
+        "row": "29",
+        "series name": "UNRATE",
+        "month measured": "2026-07",
+        "published on": "2026-08-07",
+        "value": "4.1"
+      },
+      {
+        "row": "30",
+        "series name": "UNRATE",
+        "month measured": "2026-08",
+        "published on": "2026-09-04",
+        "value": "4.1"
+      }
+    ],
+    "excluded_future_rows": [
+      31
+    ]
+  },
+  "portfolios": [
+    {
+      "weights": {
+        "EWY": 0.2,
+        "QQQM": 0.2,
+        "VOO": 0.2,
+        "FNDX": 0.2,
+        "BIL": 0.2
+      },
+      "gross_return": 0.08873194623123182,
+      "net_return": 0.08753194623123181,
+      "volatility": 0.14620691716914344,
+      "turnover": 0.6,
+      "cost": 0.0012,
+      "name": "Equal weight",
+      "checks": [
+        {
+          "rule": "Fully invested",
+          "passed": true,
+          "value": 1.0,
+          "limit": 1
+        },
+        {
+          "rule": "Long-only; no leverage",
+          "passed": true,
+          "value": 0.2,
+          "limit": 0
+        },
+        {
+          "rule": "Estimated net return target",
+          "passed": true,
+          "value": 0.08753194623123181,
+          "limit": 0.065
+        },
+        {
+          "rule": "Estimated volatility limit",
+          "passed": true,
+          "value": 0.14620691716914344,
+          "limit": 0.15
+        },
+        {
+          "rule": "Single-fund limit",
+          "passed": true,
+          "value": 0.2,
+          "limit": 0.6
+        },
+        {
+          "rule": "Treasury-bill minimum",
+          "passed": true,
+          "value": 0.2,
+          "limit": 0.1
+        },
+        {
+          "rule": "Annual one-way turnover limit",
+          "passed": false,
+          "value": 0.6,
+          "limit": 0.25
+        },
+        {
+          "rule": "Point-in-time signal available",
+          "passed": true,
+          "value": null,
+          "limit": null
+        }
+      ],
+      "passed": false,
+      "failed_rules": [
+        "Annual one-way turnover limit"
+      ]
+    },
+    {
+      "weights": {
+        "EWY": 0,
+        "QQQM": 0,
+        "VOO": 0.6,
+        "FNDX": 0,
+        "BIL": 0.4
+      },
+      "gross_return": 0.0774638924624636,
+      "net_return": 0.0774638924624636,
+      "volatility": 0.07486220953550035,
+      "turnover": 0.0,
+      "cost": 0.0,
+      "name": "60/40 benchmark",
+      "checks": [
+        {
+          "rule": "Fully invested",
+          "passed": true,
+          "value": 1.0,
+          "limit": 1
+        },
+        {
+          "rule": "Long-only; no leverage",
+          "passed": true,
+          "value": 0,
+          "limit": 0
+        },
+        {
+          "rule": "Estimated net return target",
+          "passed": true,
+          "value": 0.0774638924624636,
+          "limit": 0.065
+        },
+        {
+          "rule": "Estimated volatility limit",
+          "passed": true,
+          "value": 0.07486220953550035,
+          "limit": 0.15
+        },
+        {
+          "rule": "Single-fund limit",
+          "passed": true,
+          "value": 0.6,
+          "limit": 0.6
+        },
+        {
+          "rule": "Treasury-bill minimum",
+          "passed": true,
+          "value": 0.4,
+          "limit": 0.1
+        },
+        {
+          "rule": "Annual one-way turnover limit",
+          "passed": true,
+          "value": 0.0,
+          "limit": 0.25
+        },
+        {
+          "rule": "Point-in-time signal available",
+          "passed": true,
+          "value": null,
+          "limit": null
+        }
+      ],
+      "passed": true,
+      "failed_rules": []
+    },
+    {
+      "weights": {
+        "EWY": 0.0,
+        "QQQM": 0.0,
+        "VOO": 0.35,
+        "FNDX": 0.05,
+        "BIL": 0.6
+      },
+      "gross_return": 0.06619583869369539,
+      "net_return": 0.06569583869369539,
+      "volatility": 0.04899473080388058,
+      "turnover": 0.24999999999999997,
+      "cost": 0.0004999999999999999,
+      "name": "Constrained portfolio",
+      "checks": [
+        {
+          "rule": "Fully invested",
+          "passed": true,
+          "value": 1.0,
+          "limit": 1
+        },
+        {
+          "rule": "Long-only; no leverage",
+          "passed": true,
+          "value": 0.0,
+          "limit": 0
+        },
+        {
+          "rule": "Estimated net return target",
+          "passed": true,
+          "value": 0.06569583869369539,
+          "limit": 0.065
+        },
+        {
+          "rule": "Estimated volatility limit",
+          "passed": true,
+          "value": 0.04899473080388058,
+          "limit": 0.15
+        },
+        {
+          "rule": "Single-fund limit",
+          "passed": true,
+          "value": 0.6,
+          "limit": 0.6
+        },
+        {
+          "rule": "Treasury-bill minimum",
+          "passed": true,
+          "value": 0.6,
+          "limit": 0.1
+        },
+        {
+          "rule": "Annual one-way turnover limit",
+          "passed": true,
+          "value": 0.24999999999999997,
+          "limit": 0.25
+        },
+        {
+          "rule": "Point-in-time signal available",
+          "passed": true,
+          "value": null,
+          "limit": null
+        }
+      ],
+      "passed": true,
+      "failed_rules": []
+    }
+  ],
+  "feasible_count": 332,
+  "decision": "PILOT",
+  "decision_line": "Pilot only in a 5-10% shadow sleeve, with 0% live allocation; reverse to reject if the signal is unavailable or no allocation meets the mandate. Consider live adoption only after 12 prospective monthly observations, net return at least the benchmark, realized annualized volatility at most 15%, and no mandate breach at an annual rebalance.",
+  "live_allocation_range": [
+    0,
+    0
+  ],
+  "shadow_allocation_range": [
+    0.05,
+    0.1
+  ],
+  "stresses": [
+    {
+      "scenario": "Base",
+      "changes": {},
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.05,
+          "BIL": 0.6
+        },
+        "gross_return": 0.06619583869369539,
+        "net_return": 0.06569583869369539,
+        "volatility": 0.04899473080388058,
+        "turnover": 0.24999999999999997,
+        "cost": 0.0004999999999999999,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06569583869369539,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.04899473080388058,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.24999999999999997,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Equity estimates -3 percentage points",
+      "changes": {
+        "equity_shift_pp": -3.0
+      },
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.6,
+          "FNDX": 0.25,
+          "BIL": 0.15
+        },
+        "gross_return": 0.06604895967342385,
+        "net_return": 0.06554895967342385,
+        "volatility": 0.10116000229358131,
+        "turnover": 0.25,
+        "cost": 0.0005,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06554895967342385,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.10116000229358131,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.15,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.25,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "60-month estimation window",
+      "changes": {
+        "window_months": 60
+      },
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.15,
+          "BIL": 0.5
+        },
+        "gross_return": 0.06797133619618434,
+        "net_return": 0.06747133619618434,
+        "volatility": 0.0763728197687643,
+        "turnover": 0.25,
+        "cost": 0.0005,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06747133619618434,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.0763728197687643,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.5,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.5,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.25,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Trading cost 100 bps per side",
+      "changes": {
+        "cost_bps": 100.0
+      },
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.4,
+          "FNDX": 0.05,
+          "BIL": 0.55
+        },
+        "gross_return": 0.06901285213588745,
+        "net_return": 0.06501285213588745,
+        "volatility": 0.05518457930176842,
+        "turnover": 0.19999999999999998,
+        "cost": 0.004,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06501285213588745,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.05518457930176842,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.55,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.55,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.19999999999999998,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Volatility ceiling 4%",
+      "changes": {
+        "max_volatility": 0.04
+      },
+      "decision": "REJECT",
+      "portfolio": null,
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Single-fund ceiling 30%",
+      "changes": {
+        "max_weight": 0.3
+      },
+      "decision": "REJECT",
+      "portfolio": null,
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Release availability +45 days",
+      "changes": {
+        "extra_lag_days": 45
+      },
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.05,
+          "BIL": 0.6
+        },
+        "gross_return": 0.06619583869369539,
+        "net_return": 0.06569583869369539,
+        "volatility": 0.04899473080388058,
+        "turnover": 0.24999999999999997,
+        "cost": 0.0004999999999999999,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06569583869369539,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.04899473080388058,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.24999999999999997,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": -0.10000000000000053,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "28",
+            "series name": "UNRATE",
+            "month measured": "2026-06",
+            "published on": "2026-07-02",
+            "value": "4.2"
+          },
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          30,
+          31
+        ]
+      }
+    },
+    {
+      "scenario": "Signal disabled (diagnostic only)",
+      "changes": {
+        "use_signal": false
+      },
+      "decision": "PILOT",
+      "portfolio": {
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.05,
+          "BIL": 0.6
+        },
+        "gross_return": 0.06619583869369539,
+        "net_return": 0.06569583869369539,
+        "volatility": 0.04899473080388058,
+        "turnover": 0.24999999999999997,
+        "cost": 0.0004999999999999999,
+        "name": "Constrained portfolio",
+        "checks": [
+          {
+            "rule": "Fully invested",
+            "passed": true,
+            "value": 1.0,
+            "limit": 1
+          },
+          {
+            "rule": "Long-only; no leverage",
+            "passed": true,
+            "value": 0.0,
+            "limit": 0
+          },
+          {
+            "rule": "Estimated net return target",
+            "passed": true,
+            "value": 0.06569583869369539,
+            "limit": 0.065
+          },
+          {
+            "rule": "Estimated volatility limit",
+            "passed": true,
+            "value": 0.04899473080388058,
+            "limit": 0.15
+          },
+          {
+            "rule": "Single-fund limit",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.6
+          },
+          {
+            "rule": "Treasury-bill minimum",
+            "passed": true,
+            "value": 0.6,
+            "limit": 0.1
+          },
+          {
+            "rule": "Annual one-way turnover limit",
+            "passed": true,
+            "value": 0.24999999999999997,
+            "limit": 0.25
+          },
+          {
+            "rule": "Point-in-time signal available",
+            "passed": true,
+            "value": null,
+            "limit": null
+          }
+        ],
+        "passed": true,
+        "failed_rules": []
+      },
+      "signal": {
+        "available": true,
+        "reason": "Use latest published vintages; change measured in percentage points, not percent.",
+        "rise_pp": 0.0,
+        "defensive": false,
+        "selected_rows": [
+          {
+            "row": "29",
+            "series name": "UNRATE",
+            "month measured": "2026-07",
+            "published on": "2026-08-07",
+            "value": "4.1"
+          },
+          {
+            "row": "30",
+            "series name": "UNRATE",
+            "month measured": "2026-08",
+            "published on": "2026-09-04",
+            "value": "4.1"
+          }
+        ],
+        "excluded_future_rows": [
+          31
+        ]
+      }
+    }
+  ],
+  "walk_forward": {
+    "start": "2024-09-30",
+    "end": "2026-09-30",
+    "months": 24,
+    "signal_enabled": true,
+    "results": [
+      {
+        "name": "Constrained",
+        "total_return": 0.19688183578266982,
+        "cagr": 0.09402094851180509,
+        "volatility": 0.055574671208190554,
+        "max_drawdown": -0.03253819815975889,
+        "sum_trade_cost_fractions": 0.0007521891585736798,
+        "wealth": [
+          1.0,
+          0.996277866551371,
+          1.0278829040469368,
+          1.0130832739052604,
+          1.030492315860617,
+          1.0274793492891199,
+          1.0030044352839795,
+          0.9969619526850354,
+          1.0255059132674689,
+          1.0521875326448686,
+          1.063803734622884,
+          1.0804681465259425,
+          1.100402587443761,
+          1.1122456029789904,
+          1.116392297487901,
+          1.1191242509197172,
+          1.1292833638835185,
+          1.1291677893319463,
+          1.108926384995904,
+          1.1554622770017982,
+          1.1815823810542023,
+          1.1796824181716434,
+          1.183222032549482,
+          1.19803157436965,
+          1.1968818357826698
+        ]
+      },
+      {
+        "name": "Equal weight",
+        "total_return": 0.6338910153576882,
+        "cagr": 0.2782374643851151,
+        "volatility": 0.19288768697496256,
+        "max_drawdown": -0.09369681796330365,
+        "sum_trade_cost_fractions": 0.0012616024463103334,
+        "wealth": [
+          1.0,
+          0.9808308111152821,
+          1.0085365521675747,
+          0.9777689254634336,
+          1.0063329925014304,
+          1.0008624156573813,
+          0.9643330540444388,
+          0.9664792513625641,
+          1.0185611092107532,
+          1.0875716233911366,
+          1.1034706862009604,
+          1.11815182336156,
+          1.170118136963626,
+          1.2395455077816375,
+          1.2248636814184564,
+          1.2500285161706783,
+          1.3428796570260255,
+          1.4281634768997435,
+          1.3109943825612227,
+          1.5041723372647404,
+          1.6886463718906912,
+          1.6764395880108596,
+          1.530425580179256,
+          1.6261658522667182,
+          1.6338910153576882
+        ]
+      },
+      {
+        "name": "60/40 benchmark",
+        "total_return": 0.2451094114150334,
+        "cagr": 0.11584470757136867,
+        "volatility": 0.07595291979852305,
+        "max_drawdown": -0.042099591831812444,
+        "sum_trade_cost_fractions": 5.633623364566759e-05,
+        "wealth": [
+          1.0,
+          0.9958937614354663,
+          1.0323817453397262,
+          1.0193207709253018,
+          1.0373005142597422,
+          1.0306302398088518,
+          0.9970132216538732,
+          0.993630586002478,
+          1.031772440296686,
+          1.065228210542775,
+          1.0816161138323146,
+          1.0970001056361522,
+          1.1225452115848258,
+          1.1401810744649123,
+          1.142983550626651,
+          1.1450423878297755,
+          1.1564073485715385,
+          1.151908486987548,
+          1.1183649558324997,
+          1.1894213359323516,
+          1.2295006727795892,
+          1.2233633948690024,
+          1.2247408109813396,
+          1.246261033036758,
+          1.2451094114150334
+        ]
+      }
+    ],
+    "trades": [
+      {
+        "date": "2024-09-30",
+        "portfolio": "Constrained",
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.15,
+          "BIL": 0.5
+        },
+        "executed": true,
+        "cost": 0.0005,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2024-09-30",
+        "portfolio": "Equal weight",
+        "weights": {
+          "EWY": 0.2,
+          "QQQM": 0.2,
+          "VOO": 0.2,
+          "FNDX": 0.2,
+          "BIL": 0.2
+        },
+        "executed": true,
+        "cost": 0.0012,
+        "passed": false,
+        "failed_rules": [
+          "Estimated net return target",
+          "Estimated volatility limit",
+          "Annual one-way turnover limit"
+        ]
+      },
+      {
+        "date": "2024-09-30",
+        "portfolio": "60/40 benchmark",
+        "weights": {
+          "EWY": 0,
+          "QQQM": 0,
+          "VOO": 0.6,
+          "FNDX": 0,
+          "BIL": 0.4
+        },
+        "executed": true,
+        "cost": 0.0,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "Constrained",
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.05,
+          "BIL": 0.6
+        },
+        "executed": true,
+        "cost": 0.0002521891585736798,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "Equal weight",
+        "weights": {
+          "EWY": 0.2,
+          "QQQM": 0.2,
+          "VOO": 0.2,
+          "FNDX": 0.2,
+          "BIL": 0.2
+        },
+        "executed": true,
+        "cost": 6.160244631033354e-05,
+        "passed": false,
+        "failed_rules": [
+          "Treasury-bill minimum"
+        ]
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "60/40 benchmark",
+        "weights": {
+          "EWY": 0,
+          "QQQM": 0,
+          "VOO": 0.6,
+          "FNDX": 0,
+          "BIL": 0.4
+        },
+        "executed": true,
+        "cost": 5.633623364566759e-05,
+        "passed": true,
+        "failed_rules": []
+      }
+    ],
+    "monitoring": [
+      {
+        "date": "2024-11-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2024-12-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-01-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-02-28",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-05-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-06-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-07-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-08-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-10-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-11-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-12-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-12-31",
+        "event": "Signal unavailable: block new orders, retain holdings",
+        "reason": "The two newest required measured months are not consecutive; no filling is allowed."
+      },
+      {
+        "date": "2026-01-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-02-28",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-03-31",
+        "portfolio": "Constrained",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-04-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-05-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-06-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-07-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-08-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-09-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      }
+    ],
+    "limitations": "Retrospective 24-month chronological diagnostic, not an untouched holdout. Rule selected after data existed. Only two annual rebalances; revised adjusted-price snapshots. No taxes. Baselines execute even when mandate fails; failures are recorded."
+  },
+  "without_signal": {
+    "start": "2024-09-30",
+    "end": "2026-09-30",
+    "months": 24,
+    "signal_enabled": false,
+    "results": [
+      {
+        "name": "Constrained",
+        "total_return": 0.19688183578266982,
+        "cagr": 0.09402094851180509,
+        "volatility": 0.055574671208190554,
+        "max_drawdown": -0.03253819815975889,
+        "sum_trade_cost_fractions": 0.0007521891585736798,
+        "wealth": [
+          1.0,
+          0.996277866551371,
+          1.0278829040469368,
+          1.0130832739052604,
+          1.030492315860617,
+          1.0274793492891199,
+          1.0030044352839795,
+          0.9969619526850354,
+          1.0255059132674689,
+          1.0521875326448686,
+          1.063803734622884,
+          1.0804681465259425,
+          1.100402587443761,
+          1.1122456029789904,
+          1.116392297487901,
+          1.1191242509197172,
+          1.1292833638835185,
+          1.1291677893319463,
+          1.108926384995904,
+          1.1554622770017982,
+          1.1815823810542023,
+          1.1796824181716434,
+          1.183222032549482,
+          1.19803157436965,
+          1.1968818357826698
+        ]
+      },
+      {
+        "name": "Equal weight",
+        "total_return": 0.6338910153576882,
+        "cagr": 0.2782374643851151,
+        "volatility": 0.19288768697496256,
+        "max_drawdown": -0.09369681796330365,
+        "sum_trade_cost_fractions": 0.0012616024463103334,
+        "wealth": [
+          1.0,
+          0.9808308111152821,
+          1.0085365521675747,
+          0.9777689254634336,
+          1.0063329925014304,
+          1.0008624156573813,
+          0.9643330540444388,
+          0.9664792513625641,
+          1.0185611092107532,
+          1.0875716233911366,
+          1.1034706862009604,
+          1.11815182336156,
+          1.170118136963626,
+          1.2395455077816375,
+          1.2248636814184564,
+          1.2500285161706783,
+          1.3428796570260255,
+          1.4281634768997435,
+          1.3109943825612227,
+          1.5041723372647404,
+          1.6886463718906912,
+          1.6764395880108596,
+          1.530425580179256,
+          1.6261658522667182,
+          1.6338910153576882
+        ]
+      },
+      {
+        "name": "60/40 benchmark",
+        "total_return": 0.2451094114150334,
+        "cagr": 0.11584470757136867,
+        "volatility": 0.07595291979852305,
+        "max_drawdown": -0.042099591831812444,
+        "sum_trade_cost_fractions": 5.633623364566759e-05,
+        "wealth": [
+          1.0,
+          0.9958937614354663,
+          1.0323817453397262,
+          1.0193207709253018,
+          1.0373005142597422,
+          1.0306302398088518,
+          0.9970132216538732,
+          0.993630586002478,
+          1.031772440296686,
+          1.065228210542775,
+          1.0816161138323146,
+          1.0970001056361522,
+          1.1225452115848258,
+          1.1401810744649123,
+          1.142983550626651,
+          1.1450423878297755,
+          1.1564073485715385,
+          1.151908486987548,
+          1.1183649558324997,
+          1.1894213359323516,
+          1.2295006727795892,
+          1.2233633948690024,
+          1.2247408109813396,
+          1.246261033036758,
+          1.2451094114150334
+        ]
+      }
+    ],
+    "trades": [
+      {
+        "date": "2024-09-30",
+        "portfolio": "Constrained",
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.15,
+          "BIL": 0.5
+        },
+        "executed": true,
+        "cost": 0.0005,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2024-09-30",
+        "portfolio": "Equal weight",
+        "weights": {
+          "EWY": 0.2,
+          "QQQM": 0.2,
+          "VOO": 0.2,
+          "FNDX": 0.2,
+          "BIL": 0.2
+        },
+        "executed": true,
+        "cost": 0.0012,
+        "passed": false,
+        "failed_rules": [
+          "Estimated net return target",
+          "Estimated volatility limit",
+          "Annual one-way turnover limit"
+        ]
+      },
+      {
+        "date": "2024-09-30",
+        "portfolio": "60/40 benchmark",
+        "weights": {
+          "EWY": 0,
+          "QQQM": 0,
+          "VOO": 0.6,
+          "FNDX": 0,
+          "BIL": 0.4
+        },
+        "executed": true,
+        "cost": 0.0,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "Constrained",
+        "weights": {
+          "EWY": 0.0,
+          "QQQM": 0.0,
+          "VOO": 0.35,
+          "FNDX": 0.05,
+          "BIL": 0.6
+        },
+        "executed": true,
+        "cost": 0.0002521891585736798,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "Equal weight",
+        "weights": {
+          "EWY": 0.2,
+          "QQQM": 0.2,
+          "VOO": 0.2,
+          "FNDX": 0.2,
+          "BIL": 0.2
+        },
+        "executed": true,
+        "cost": 6.160244631033354e-05,
+        "passed": true,
+        "failed_rules": []
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "60/40 benchmark",
+        "weights": {
+          "EWY": 0,
+          "QQQM": 0,
+          "VOO": 0.6,
+          "FNDX": 0,
+          "BIL": 0.4
+        },
+        "executed": true,
+        "cost": 5.633623364566759e-05,
+        "passed": true,
+        "failed_rules": []
+      }
+    ],
+    "monitoring": [
+      {
+        "date": "2024-11-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2024-12-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-01-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-02-28",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-05-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-06-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-07-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-08-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-09-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-10-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-11-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2025-12-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-01-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-02-28",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-03-31",
+        "portfolio": "Constrained",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-04-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-05-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-06-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-07-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-08-31",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      },
+      {
+        "date": "2026-09-30",
+        "portfolio": "60/40 benchmark",
+        "event": "Drift outside weight limits: flag for committee; no unscheduled trade assumed"
+      }
+    ],
+    "limitations": "Retrospective 24-month chronological diagnostic, not an untouched holdout. Rule selected after data existed. Only two annual rebalances; revised adjusted-price snapshots. No taxes. Baselines execute even when mandate fails; failures are recorded."
+  },
+  "fingerprints": {
+    "data/prices.csv": "924d384ccf8adfa9e80d5ff15ea6dad5c1c1a7e9260ca5948b0d8af03298ddce",
+    "data/unrate_vintages.csv": "4a0d14eaa414a273a09869877ff6e8aae5d1d4c3024bd26df8bdf9a291191ff1",
+    "config.json": "568a25ce7ca883b831026033d2609b708177b2e2644754b28a6531c691fee84e",
+    "engine.py": "e5f654debc59aed6a7092ac7ff738df8dceab348040e91f4a8920b190577a1d5"
+  },
+  "run_timestamp_utc": "2026-11-24T01:39:23.571687+00:00"
+}

@@ -1626,7 +1626,7 @@
     "data/prices.csv": "924d384ccf8adfa9e80d5ff15ea6dad5c1c1a7e9260ca5948b0d8af03298ddce",
     "data/unrate_vintages.csv": "4a0d14eaa414a273a09869877ff6e8aae5d1d4c3024bd26df8bdf9a291191ff1",
     "config.json": "568a25ce7ca883b831026033d2609b708177b2e2644754b28a6531c691fee84e",
-    "engine.py": "ebdeb4c58f1fd01b4a104ce530a597fa4dea68a1edc6007f9d4c868eb90e9df7"
+    "engine.py": "e5f654debc59aed6a7092ac7ff738df8dceab348040e91f4a8920b190577a1d5"
   },
-  "run_timestamp_utc": "2026-11-17T04:50:37.222565+00:00"
+  "run_timestamp_utc": "2026-11-23T16:52:13.505916+00:00"
 }

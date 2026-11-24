@@ -1,0 +1,26 @@
+{
+  "verified_at_utc": "2026-11-24T01:46:29.444532+00:00",
+  "prediction_commit": "d4b657f9f6be3dc352fcf2cbb08c73c5eab3ed84",
+  "commit_time_utc": "2026-11-24T01:36:50+00:00",
+  "before_run_utc": "2026-11-24T01:39:23.571687+00:00",
+  "after_run_utc": "2026-11-24T01:39:33.942975+00:00",
+  "actor": "Student reports executing runs; assistant inspected preserved files afterward",
+  "only_config_change": {
+    "max_volatility": [
+      0.15,
+      0.2
+    ]
+  },
+  "decision_before": "PILOT",
+  "decision_after": "PILOT",
+  "financial_metrics_unchanged": true,
+  "pre_run_record_matched_immutable_commit": true,
+  "changed_config_matched_immutable_commit": true,
+  "ai_off_phase": "Not certified; chat preparation and post-run AI assistance disclosed",
+  "snapshot_hashes": {
+    "outputs\\snapshots\\final-before\\decision-output.md": "6aecd49a096916136eaa70b41a39d481803a11521aaee06a0262651919f85624",
+    "outputs\\snapshots\\final-before\\results.json": "01605814a19124aba763859f002e74de6fa971750c71f2bd07f2a4fc8b756223",
+    "outputs\\snapshots\\final-after\\decision-output.md": "f543a5343c83d722fef73a77af9e8d6d588c83f2a5a4d01ff5c5a8f28b765611",
+    "outputs\\snapshots\\final-after\\results.json": "fb88fca932383463aa900706d8e972405f9d1e5ae4ba8d3b2b4c58213923e49f"
+  }
+}

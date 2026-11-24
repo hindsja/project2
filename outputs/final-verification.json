@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-11-23T16:52:14.535355+00:00",
+  "actor": "Codex (GPT-6), automated verification; not a human AI-off or partner run",
+  "python": "3.12.13 (main, May 10 2026, 19:35:37) [MSC v.1944 64 bit (AMD64)]",
+  "public_commit_checked": "20010a6ecbe0ac1931e631964e01b989f9f9c2ee",
+  "public_download_original_tests": 19,
+  "public_download_cold_run": {
+    "actor": "AI-assisted automated check, not partner evidence",
+    "timestamp_utc": "2026-11-23T16:46:15.509081+00:00",
+    "command": "python app.py --port 0",
+    "first_failure": null,
+    "checks": [
+      "Home page returned HTTP 200 from fresh copy with site-packages disabled.",
+      "Base decision and all constrained mandate checks returned successfully.",
+      "Changing fund cap to 30% recalculated to REJECT.",
+      "Export command produced readable output and committee memo in isolated copy."
+    ],
+    "result_location": "Browser at printed localhost address; outputs/decision-output.md and outputs/results.json",
+    "status": "PASS",
+    "elapsed_seconds": 0.735
+  },
+  "final_tests": 21,
+  "final_test_result": "PASS",
+  "final_cold_run": {
+    "actor": "AI-assisted automated check, not partner evidence",
+    "timestamp_utc": "2026-11-23T16:52:13.679705+00:00",
+    "command": "python app.py --port 0",
+    "first_failure": null,
+    "checks": [
+      "Home page returned HTTP 200 from fresh copy with site-packages disabled.",
+      "Base decision and all constrained mandate checks returned successfully.",
+      "Changing fund cap to 30% recalculated to REJECT.",
+      "Export command produced readable output and committee memo in isolated copy."
+    ],
+    "result_location": "Browser at printed localhost address; outputs/decision-output.md and outputs/results.json",
+    "status": "PASS",
+    "elapsed_seconds": 0.704
+  },
+  "unchanged": [
+    "base portfolios",
+    "stress results",
+    "chronological results",
+    "approved configuration",
+    "original prediction and snapshots"
+  ],
+  "visual_browser_check": "NOT COMPLETED: browser host unavailable; native control stopped because Chrome URL could not be established reliably",
+  "final_upload": "Not performed",
+  "human_evidence": "AI-off compliance, personal review, recordings and transcripts not certified",
+  "hashes": {
+    "app.py": "99049dfed72fada2f347c5c06207c2ffba73e1e42336e5852a0d73df98b0089c",
+    "engine.py": "e5f654debc59aed6a7092ac7ff738df8dceab348040e91f4a8920b190577a1d5",
+    "reporting.py": "2824c43e47cccaa20e89579b418094ad4ed65ef7e3637ae4c14031b6e873a488",
+    "static/index.html": "eb58a56dc864bd7a8c2caa8fddc915ea999b21ac9cd4986fae7b6923a68b36f9",
+    "config.json": "568a25ce7ca883b831026033d2609b708177b2e2644754b28a6531c691fee84e",
+    "data/prices.csv": "924d384ccf8adfa9e80d5ff15ea6dad5c1c1a7e9260ca5948b0d8af03298ddce",
+    "data/unrate_vintages.csv": "4a0d14eaa414a273a09869877ff6e8aae5d1d4c3024bd26df8bdf9a291191ff1",
+    "tests/test_engine.py": "805f2f6a1532f34364f8a2867696f5d4e516e8ffe7798bc957e825866ddd5e99",
+    "docs/decision-memo.md": "bdfbaf05139f08c499ac4a9653c2841d7783ab08f793ee33fb708ff376035448",
+    "docs/validation-and-ai-use.md": "030cec732abc71c8388f3f13bd8e56b3adac28bdb8ff9e41f9addec5567d5b93"
+  },
+  "preserved_locked_evidence_hashes": {
+    "docs\\locked-changed-input.md": "c84277839bd1c9c734e61fe6109b2b45317a49d01764e13019cc1c8235f175e1",
+    "outputs\\snapshots\\lab20-after\\decision-output.md": "b32164ed31cb219be9b0c6ffbfa0d0a0cef5e49d3814adcb53d28cc3d81898fb",
+    "outputs\\snapshots\\lab20-after\\results.json": "e6ece3d017ac1ba41ba95342c94cc9490e9036817f182409cfdd1ea0903f084b",
+    "outputs\\snapshots\\lab20-before\\decision-output.md": "b65eb48ad0ce6643fc89a546da8bba2028fea9e87d60a2306fc623ee6e5a325c",
+    "outputs\\snapshots\\lab20-before\\results.json": "4bb507ad882592679eafa9b44a7a13569dc02d8201d2e40639135e11eebac817"
+  }
+}
