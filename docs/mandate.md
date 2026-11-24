@@ -2,7 +2,7 @@
 
 ## Approved hypothetical investor mandate
 
-Approved by the user in conversation on November 16, 2026. This is a new hypothetical client policy; the Lab 13 file contains the separate Meridian classroom case. No prior client mandate or pre-AI prediction is invented.
+Approved by the user in conversation on November 16, 2026. This is a new hypothetical client policy; the Lab 13 file contains the separate Meridian classroom case. No prior client mandate or pre-AI prediction is invented. The [Lab 13 follow-on instructions](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-08/lab-13-portfolio-mandate.md#after-this-lab-your-project-2-mandate) explicitly ask for the student's own client mandate and allow AI. This policy is that follow-on mandate; it is not represented as the Meridian exercise or as a policy already submitted during Lab 13.
 
 | Item | Policy |
 |---|---|
@@ -50,3 +50,7 @@ The net-return screen deducts the proposed transition's trading cost from a one-
 ## Stop/reversal policy
 
 Stop new allocations on missing/invalid data, stale or nonconsecutive signal observations, or no feasible grid allocation. Review any monitoring breach rather than silently relaxing the mandate. The pilot should be rejected if these conditions prevent a defensible process. Consider live adoption only after at least 12 prospective monthly observations, net performance at least the benchmark, realized annualized volatility at most 15%, no breach at annual rebalance, and committee approval. This minimum observation period is still statistically weak evidence.
+
+## Client question and decision consequence
+
+AI-assisted proposed question: Is a shadow research pilot with zero live allocation acceptable while prospective evidence is collected? This is not a recorded client exchange. If immediate live allocation or a dependable 6.5% compound outcome is required, reject this process: the historical arithmetic estimates and short diagnostic do not establish either. The planning mandate has no withdrawal obligation; introducing one requires a new funding model and renewed suitability review.

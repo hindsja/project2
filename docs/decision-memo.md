@@ -4,20 +4,20 @@ The submitting analyst is responsible for reviewing the analysis and owning the 
 
 # Investment management decision memo
 
-**Historical cutoff:** 2026-09-30. **Prepared:** 2026-11-17T04:50:37.222565+00:00.
+**Historical cutoff:** 2026-09-30. **Prepared:** 2026-11-23T16:52:13.505916+00:00.
 Hypothetical seven-year investor; no withdrawals. Final analyst review/sign-off remains pending.
 
 ## Committee ask
 
 **PILOT. Pilot only in a 5-10% shadow sleeve, with 0% live allocation; reverse to reject if the signal is unavailable or no allocation meets the mandate. Consider live adoption only after 12 prospective monthly observations, net return at least the benchmark, realized annualized volatility at most 15%, and no mandate breach at an annual rebalance.**
 
-Live allocation range: **0?0%**. Research range, if feasible: **5?10% of a simulated portfolio**.
+Live allocation range: **0%**. Research allocation range: **5-10% of a simulated portfolio**.
 The weights below apply inside that shadow sleeve, not to actual investor wealth.
 
 ## Mandate and decision numbers
 
-The user-approved hypothetical mandate requires a 6.5% estimated annual net return, at most 15% estimated volatility,
-60% per fund, at least 10% BIL, no borrowing/shorting, and at most 25% one-way annual turnover.
+The evaluated hypothetical mandate requires a 6.50% estimated annual net return, at most 15.00% estimated volatility,
+60.00% per fund, at least 10.00% BIL, no borrowing/shorting, and at most 25.00% one-way annual turnover.
 The starting portfolio and benchmark are 60% VOO / 40% BIL. This is a new client policy, not the Lab 13 Meridian classroom case.
 
 | Portfolio | EWY / QQQM / VOO / FNDX / BIL | Estimated net return | Estimated volatility | One-way turnover | Mandate verdict |
@@ -66,4 +66,4 @@ ETF overlap, covariance regime changes, falling bill yields, taxes, intramonth l
 There is no seven-year funding simulation. Baselines trade even when failing a rule; failures and drift warnings are exposed in the logs.
 
 Sources and evidence: [data card](data-card.md), [mandate](mandate.md), [actual results](../outputs/results.json),
-[validation and AI use](validation-and-ai-use.md). Human locked-input, partner and video evidence remain pending.
+[validation and AI use](validation-and-ai-use.md). The locked-record AI-off limitation is disclosed in the validation record.
