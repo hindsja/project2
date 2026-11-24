@@ -1,0 +1,19 @@
+0:033 secondsHello, I'm John and today I'll be going over uh my project too. So, this project
+0:1010 secondsdeveloped from a portfolio analysis as well as um an unemployment timing audit and and now it's a um like an interactive investment management app.
+0:2020 secondsSo um the system it now includes like our treasury bill fund, a couple baseline portfolios, some explicit
+0:2727 secondsconstraints and um stress tests that will um reject
+0:3434 secondsum some allocations. So um one change in my understanding came from uh our volatility um limit experiment. I
+0:4343 secondspredicted that the um estimated volatility would increase when allowable um
+0:5151 secondsum the allowable max rose. So if I increased the ceiling um from 15 to 20%
+0:5858 secondshere um but our actual portfolio did not change at all. It remained at uh 4.9 for our um uh estimated volatility.
+1:101 minute, 10 secondsAnd so reviewing that result with AI clarified that um the optimizer minimizes volatility while um meeting
+1:181 minute, 18 secondsits uh targeted return. So allowing for higher ceiling doesn't mean it's actually going to be taking on any more
+1:241 minute, 24 secondsrisk. Um my recommendation is that um we're going to remain the um pilot with
+1:321 minute, 32 secondsuh zero live capital. So now going into uh VS code uh this line specifically
+1:391 minute, 39 secondshere um it's one of our AI generated calculations. So, checking it
+1:461 minute, 46 secondsindependently or transaction costs. If we have um like a hypothetical uh $10,000 portfolio, the um uh proposed
+1:561 minute, 56 secondsapplication recommends selling uh or requires selling uh $2,500 of Vanguard
+2:042 minutes, 4 secondsbuying $2,500 across um Charles Swab and the Treasury Fund. And so, that's $5,000
+2:122 minutes, 12 secondsof total purchases and sales. So once in the calculator, we did the math
+2:202 minutes, 20 secondsourself and um at a 10 basis points per dollar traded, the cost is $5 or 0.05%
+2:272 minutes, 27 secondsof capital. So the code is going to count for both purchases and sales matching this math. So that will be a um calculation that I do accept.
