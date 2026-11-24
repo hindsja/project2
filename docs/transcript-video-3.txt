@@ -1,0 +1,38 @@
+0:022 secondsHello, I'm John. This is uh video three of project two. So my recommendation is
+0:099 secondsa simulated pilot with zero life capital. I'm asking the committee to approve a five to 10% sleeve of a simulated portfolio for further testing.
+0:2222 secondsSo um the investor has a 7-year um horizon and no withdrawals. The
+0:2828 secondsbenchmark is 60% Vanguard, 40% um Treasury bonds. Um
+0:3838 secondsand the main limits we have are a 6 and 12% estimated net return target, uh 15%
+0:4545 secondsfor our um volatility ceiling, and uh 25% for our annual turnover limit. So
+0:5454 secondslooking at our proposed allocation and our three approaches, um the historical decision date we're using for this is going to be September 30th of 2026.
+1:041 minute, 4 secondsSo um the proposed allocation uh holds 35% Vanguard, 5% Charles Schwab, and 60% of the treasury funds or treasury bills.
+1:171 minute, 17 secondsUm now it has an estimated uh 6.57%
+1:251 minute, 25 secondsum net real uh yeah estimated net return. Estimated volatility is 4.9%.
+1:321 minute, 32 secondsAnd these are just you know um historical estimates and they're not you know guaranteed returns but you know they're based on that. So um our
+1:411 minute, 41 secondsconstrained portfolio and a 6040 um benchmark are going to pass
+1:491 minute, 49 secondsum with our uh rules that we're implementing. Equal weight that's going to fail. It um exceeds 25% limit um because it requires a uh 60% turnover.
+2:032 minutes, 3 secondsSo that's going to fail that. Now uh just playing around with it. We'll change this to uh
+2:122 minutes, 12 seconds30 to see what's going to happen with the fund cap. Now recalculating we will see that once we change this ting the
+2:192 minutes, 19 secondsfund limit uh it's going to produce a reject on all of these. So no allocation is going to satisfy
+2:272 minutes, 27 secondsum any of our active constraints. So instead of um the app you know relaxing its constraints, it's just going to flat
+2:362 minutes, 36 secondsout reject them. So fails all. Um yeah, we'll go back. We'll restore that. Um
+2:462 minutes, 46 secondsnow I really want to show the um historical um here. So um the unemployment rule, it
+2:542 minutes, 54 secondsuses a publication um dates. So future releases can't influence um our earlier decisions. So missing information is not
+3:033 minutes, 3 secondsgoing to block allocations. Um in our uh shorter um historical diagnostic the
+3:123 minutes, 12 secondsconstraint process it is uh a 9.4%
+3:193 minutes, 19 secondsannualized versus our 11 58 uh% for the benchmark. But we have a
+3:273 minutes, 27 secondslower um realized volatility. So 5 point uh what is it 56 compared to the 7.6
+3:353 minutes, 35 secondspercentage um for our realized volatility.
+3:403 minutes, 40 secondsSo removing the unemployment rule produces the same annualized return. So um this sample doesn't really
+3:483 minutes, 48 secondsdemonstrate that the signal uh adds value. You can see there um the main limitations are the short history
+3:573 minutes, 57 secondsrevised uh price data assumptions uh chosen after um the historical period ended.
+4:074 minutes, 7 secondsUm just trading cost failing treasury bail yields and just the changing
+4:144 minutes, 14 secondsrelationships with the funds can also um weaken our results. So um the big thing
+4:214 minutes, 21 secondsis um to monitor the data uh availability and portfolio weights
+4:284 minutes, 28 secondsmonthly. Um stop stopping new orders if uh required data is invalid or the um allocation no longer meets the mandate.
+4:394 minutes, 39 secondsSo before considering a live application uh I'd like at least 12 months of um
+4:464 minutes, 46 secondsprospective observations just the net performance at least matching the benchmark realized um annual volatility
+4:554 minutes, 55 secondsno greater than 15% um no mandate breach at annual rebalancing and uh committee approval.
+5:045 minutes, 4 secondsSo 12 months would still be limited evidence but um my request would be um
+5:125 minutes, 12 secondsto have a monitored uh simulated pilot so not allocation of real money and the proposed range is 5
+5:215 minutes, 21 secondsto 10% of a simulated portfolio with 0% of it live capital. Thank you.
