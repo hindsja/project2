@@ -1,0 +1,38 @@
+Okay. Uh hello, I'm John and this is project 2 video two. So, um jumping
+0:099 secondsright into it. Uh this is our readme, uh file for our app. So, this app is just
+0:1717 secondsgoing to compare three portfolios against the same investment rules. um a new a new um user is just going to
+0:2424 secondsfollow the instructions on this readme um on how to run the app. Um
+0:3232 secondsand that's not going to be any um extra um it doesn't require any APIs or any
+0:4040 secondsother packages to be able to run the app. So, um, how it works is, um, we have a user put
+0:4949 secondsin, um, their selective settings into our dashboard here. And then, um,
+0:5959 secondsthat browser is going to send that to our app here. And, um, this file just checks, you know, the inputs and calls
+1:071 minute, 7 secondsup our, uh, engine file here. and the engine is going to do all the math for
+1:131 minute, 13 secondsus and then it will send um the results all the way back to our dashboard for
+1:211 minute, 21 secondsthe user to see. So um going into it, we're just uh we'll hop right into it.
+1:281 minute, 28 secondsGoing um to the engine.
+1:311 minute, 31 secondsUm uh first thing uh is the estimates here.
+1:371 minute, 37 secondsUm the engine calculates a monthly uh returns from saved prices and um and it estimates the um annual return and risk.
+1:481 minute, 48 secondsSo um the equity return estimates are capped at 10%. Which is an assumption um not a forecast that we've been able to
+1:581 minute, 58 secondsprove. So um next thing is the unemployment signal.
+2:052 minutes, 5 secondsUh the unemployment rule really is just going to use um information published by
+2:122 minutes, 12 secondsthe decision date. Um so missing,
+2:182 minutes, 18 secondsyou know, information isn't going to um affect um new applications. It's only
+2:272 minutes, 27 secondsgoing to use um data from the given time frame that it was told to use from. Um
+2:342 minutes, 34 secondsnext thing is we'll do the portfolio metrics here. Um
+2:412 minutes, 41 secondsour portfolio return is weighted average of fund returns u minus the trading
+2:492 minutes, 49 secondscosts. So risk accounts for how the funds move together. Um, our turnover is
+2:572 minutes, 57 secondsgoing to measure how much the per value changes and costs include both buying and selling. Um,
+3:073 minutes, 7 secondsyeah, optimize here. So, um, our optimizer, it checks allocations in a
+3:143 minutes, 14 secondsfive percentage point step. Um, and then it chooses the lowest risk allocation that meets every rule. None of them
+3:223 minutes, 22 secondsqualifies. it's going to reject instead of changing the rules. So, um, going into our test engine here,
+3:293 minutes, 29 secondsum, uh,
+3:373 minutes, 37 secondsyeah, we'll just do this one. Uh, test turnover um, and cost. this this this
+3:443 minutes, 44 secondstest here it um it checks that 25 percentage uh turnover at 10 basis points on both sides cost 05% of the
+3:543 minutes, 54 secondsportfolio. So helps catch the mistake of uh charging for only purchases or sales.
+4:004 minutesSo um all those tests checking for that we're just going to paste in this code.
+4:054 minutes, 5 secondsUm runs 21 tests in a little under a second. And so here are the actual um
+4:134 minutes, 13 secondstest results for it. So they all look, you know, okay. Um all of the tests from this page.
+4:234 minutes, 23 secondsUm this really tests um uh it checks implementation not whether
+4:304 minutes, 30 secondsyou know the uh future returns will match our estimates but just you know the historical
+4:374 minutes, 37 secondsum data has only uh 24 months and two annual rebalances. So it's not an
+4:454 minutes, 45 secondsuntouched hold out. So that's why my recommendation is going to be a simulated pilot with zero life capital.
